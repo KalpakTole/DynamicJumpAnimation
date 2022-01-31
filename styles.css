@@ -62,63 +62,58 @@ body {
 	bottom: 100px;
 }
 
-.dollar-wrapper-anim1 {
-	animation: xAxis1 1s linear 0s forwards, xAxis2 1s linear 1.5s forwards,
-		xAxis3 1s linear 3s forwards;
-}
-
-.dollar-wrapper-anim2 {
-	animation: xAxis1 1s linear 0s forwards, xAxis2 1s linear 1.5s forwards,
-		xAxis3 1s linear 3s forwards;
-}
-
 .dollar {
 	font-size: 30px;
 	line-height: 1;
 	color: var(--dollar-color);
 }
 
+.dollar-wrapper-anim1 {
+	animation: xAxis 2s linear infinite;
+}
+
 .dollar-anim1 {
-	animation: yAxis1 1s cubic-bezier(0, 2, 1, 4) 0s forwards,
-		yAxis2 1s cubic-bezier(0, 2, 1, 4) 1.5s forwards,
-		yAxis3 1s cubic-bezier(0, 2, 1, 4) 3s forwards;
+	animation: yAxis 2s cubic-bezier(0, 2, 1, 4) infinite;
 }
 
-.dollar-anim2 {
-	animation: yAxis1 1s cubic-bezier(0, 2, 1, 4) 0s forwards,
-		yAxis2 1s cubic-bezier(0, 2, 1, 4) 1.5s forwards,
-		yAxis3 1s cubic-bezier(0, 2, 1, 4) 3s forwards;
-}
-
-@keyframes xAxis1 {
-	100% {
+@keyframes xAxis {
+	28.33% {
 		transform: translateX(var(--jump-translateX));
 	}
-}
-@keyframes yAxis1 {
-	100% {
-		transform: translateY(-50px);
+	33.33% {
+		transform: translateX(var(--jump-translateX));
 	}
-}
-@keyframes xAxis2 {
-	100% {
+	61.66% {
 		transform: translateX(calc(2 * var(--jump-translateX)));
 	}
-}
-@keyframes yAxis2 {
-	100% {
-		transform: translateY(-100px);
+	66.66% {
+		transform: translateX(calc(2 * var(--jump-translateX)));
 	}
-}
-@keyframes xAxis3 {
+	95% {
+		transform: translateX(calc(3 * var(--jump-translateX)));
+	}
 	100% {
 		transform: translateX(calc(3 * var(--jump-translateX)));
 	}
 }
-@keyframes yAxis3 {
+
+@keyframes yAxis {
+	28.33% {
+		transform: translateY(-50px);
+	}
+	33.33% {
+		transform: translateY(-50px);
+	}
+	61.66% {
+		transform: translateY(-100px);
+	}
+	66.66% {
+		transform: translateY(-100px);
+	}
+	95% {
+		transform: translateY(-150px);
+	}
 	100% {
 		transform: translateY(-150px);
 	}
 }
-
-/*# sourceMappingURL=styles.css.map */
